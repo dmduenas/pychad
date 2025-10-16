@@ -1,13 +1,15 @@
 class User():
     def __init__(self, username, email, password):
         self.username = username
-        self.email = email
+        self._email = email
         self.password = password
 
-    def say_hi_to_user(self, user):
-        print(f"Sending message to {user.username}: Hi {user.username}, it's {self.username}") 
+    def clean_email(self):
+        return self._email.lower().strip()
 
-user1 = User("Bruce", "bat@gmail.com", "abc")
+
+
+user1 = User("Bruce", "Bat@gmail.com", "abc")
 user2 = User("Clarke", "superman@outlook.com", "123")
 
-user1.say_hi_to_user(user2)
+print(user1.clean_email())
