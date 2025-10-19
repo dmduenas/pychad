@@ -1,21 +1,17 @@
-class User():
-    def __init__(self, username, email, password):
-        self.username = username
-        self._email = email
-        self.password = password
+class Pet:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
 
-    @property
-    def email(self):
-        return self._email.upper()
+class Cat(Pet):
+    def __init__(self, name, color):
+        super().__init__(name, color)
 
-    @email.setter
-    def email(self, new_email):
-        if "@" in new_email:
-            self._email = new_email
+class Dog(Pet):
+    pass
 
+animal1 = Cat("Garfield", "yellow")
+animal2 = Dog("Snoopy", "white")
 
-
-user1 = User("Bruce", "Bat@gmail.com", "abc")
-user2 = User("Clarke", "superman@outlook.com", "123")
-
-print(user1.email)
+print(animal1.name)
+print(animal2.name)
