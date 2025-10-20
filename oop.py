@@ -1,17 +1,9 @@
-class Pet:
-    def __init__(self, name, color):
-        self.name = name
-        self.color = color
+class Person:
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+        self.email = f"{fname}{lname}@outlook.com"
 
-class Cat(Pet):
-    def __init__(self, name, color):
-        super().__init__(name, color)
+user1 = Person("Diego", "Martin")
 
-class Dog(Pet):
-    pass
-
-animal1 = Cat("Garfield", "yellow")
-animal2 = Dog("Snoopy", "white")
-
-print(animal1.name)
-print(animal2.name)
+print(user1.email)
