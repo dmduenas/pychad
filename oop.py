@@ -1,9 +1,9 @@
-class Person:
-    def __init__(self, fname, lname):
-        self.fname = fname
-        self.lname = lname
-        self.email = f"{fname}{lname}@outlook.com"
+import tkinter
 
-user1 = Person("Diego", "Martin")
+window = tkinter.Tk()
 
-print(user1.email)
+window.title("Hello World")
+
+
+
+window.mainloop()

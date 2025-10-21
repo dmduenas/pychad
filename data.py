@@ -1,24 +1,9 @@
-class Pet:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+import tkinter
 
-    def show(self):
-        print(f"This is a {self.name}. He is {self.age} years old")
+window = tkinter.Tk() # this creates the windoiws. But nothing will happen with this code alone. You need something
+#like a while loop to keep the window listening.
 
-class Dog(Pet):
-    def speak(self):
-        print("Woof Woof")
+print("Hello World")
 
-class Cat(Pet):
-    def speak(self):
-        print("Meow Meow")
+window.mainloop # this keeps the window open. Has to be at the end
 
-animal1 = Pet("Ace", 19)
-animal1.show()
-
-animal2 = Dog("Snoopy", 23)
-animal2.show()
-
-animal3 = Cat("Garfield", 4)
-animal3.show()
