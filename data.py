@@ -1,9 +1,7 @@
-import tkinter
+x = int(input("Enter a number: "))
+total = 0
 
-window = tkinter.Tk() # this creates the windoiws. But nothing will happen with this code alone. You need something
-#like a while loop to keep the window listening.
+for y in range(x + 1):
+    total = total + y
 
-print("Hello World")
-
-window.mainloop # this keeps the window open. Has to be at the end
-
+print(total)
