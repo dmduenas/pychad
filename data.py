@@ -1,7 +1,3 @@
-x = int(input("Enter a number: "))
-total = 0
+varname = input("Enter Text: ").strip()
 
-for y in range(x + 1):
-    total = total + y
-
-print(total)
+varname.capitalize().strip()
