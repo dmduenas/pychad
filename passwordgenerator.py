@@ -33,10 +33,6 @@ while True:
     except ValueError:
         print("Please pick a number")
 
-
-
-
-
 for x in range(user_letters):
     userpass_list.append(random.choice(alphabet))
 
@@ -46,7 +42,6 @@ for x in range(user_numbers):
 for x in range(user_symbols):
     userpass_list.append(random.choice(symbols))
 
-print(userpass_list)
 random.shuffle(userpass_list)
 
 for x in userpass_list:
