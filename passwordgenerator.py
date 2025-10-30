@@ -12,17 +12,30 @@ numerics = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
 symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
 
-def character_amount(type):
-    while True:
-        try:
-            user_letter = int(input(f"How many {type}? "))
-            return user_letter
-        except ValueError:
-            print("Please pick a number")
+while True:
+    try:
+        user_letter = int(input("How many letters? "))
+        break
+    except ValueError:
+        print("Please pick a number")
 
-user_letters = character_amount("letters")
-user_numbers = character_amount("numbers")
-user_symbols = character_amount("symbols")
+while True:
+    try:
+        user_number = int(input("How many numbers? "))
+        break
+    except ValueError:
+        print("Please pick a number")
+
+while True:
+    try:
+        user_symbol = int(input("How many symbols? "))
+        break
+    except ValueError:
+        print("Please pick a number")
+
+
+
+
 
 for x in range(user_letters):
     userpass_list.append(random.choice(alphabet))
@@ -33,6 +46,7 @@ for x in range(user_numbers):
 for x in range(user_symbols):
     userpass_list.append(random.choice(symbols))
 
+print(userpass_list)
 random.shuffle(userpass_list)
 
 for x in userpass_list:

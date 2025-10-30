@@ -1,23 +1,9 @@
-words = [
-    "freedom","journey","staring","painter","mirrors","beneath","arrival","silence","courage","fitness",
-    "trouble","captain","fortune","gardens","holiday","justice","library","machine","natural","passion",
-    "quality","respect","station","teacher","uncover","variety","warning","yelling","zealous","balance",
-    "brother","climate","diamond","express","fiction","genuine","history","imagine","jackets","kingdom",
-    "leaders","monster","nursing","opinion","protect","recover","special","traffic","uniteds","victory",
-    "wealthy","writers","against","barrier","concert","deliver","enhance","friends","glimpse","honesty",
-    "insight","justice","keeping","letters","message","nothing","officer","patient","quickly","running",
-    "seasons","towards","upgrade","virtual","wonders","younger","zephyrs","adviser","bravery","counsel",
-    "dancers","explore","fishing","grocery","harmony","inspire","jewelry","kindred","landing","morning",
-    "network","outcome","picture","railway","science","tourism","upwards","village","whisper","yielded",
-    "zeolite","absolve","brewing","channel","deliver","essence","fashion","gallery","healthy","insight",
-    "justice","kingpin","logical","musical","notable","options","perfect","railcar","skilled","theater",
-    "uniform","venture","warrior","zephyrs","antique","builder","central","defense","elegant","forever",
-    "gateway","harvest","inquiry","junglee","kinetic","limited","moments","neutral","outline","passage",
-    "readers","savings","therapy","uncover","version","writers","younger","zealous","beloved","crystal",
-    "destiny","elected","flavors","glacier","highest","improve","journey","keynote","lessons","matters",
-    "novelty","orchard","prairie","require","sisters","through","uniform","vintage","warfare","zeolite",
-    "airport","breathe","collect","driving","element","forward","general","housing","invited","justice",
-    "keeping","legends","measure","nothing","outside","present","quickly","reading","succeed","tonight",
-    "upgrade","variety","weather","yielded","zephyrs","another","borders","control","distant","explain",
-    "fortune","genuine","harvest","impress","journey","kingdom","letters","morning","natural","outline"
-]
+
+while True:
+    new_line = input("Enter text: ")
+    with open("./list.txt", mode="a") as file:
+        file.write(f"{new_line}\n")
+    choice = input("Would you like to enter a new entry? y/n ").lower()
+    if choice == "n":
+        break
+

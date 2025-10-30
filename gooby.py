@@ -1,28 +1,38 @@
-def add(num1, num2):
-    return num1 + num2
-def subtract(num1, num2):
-    return num1 - num2
-def multiple(num1, num2):
-    return num1 * num2
-def divide(num1, num2):
-    return num1 / num2
+import random
 
-operation_dict = {
-    "+": add,
-    "-": subtract,
-    "*": multiple,
-    "/": divide
-    }
+userpass_list = []
+userpass = ""
 
-num1 = float(input("Enter the first number: "))
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
-operation = input("Select an operation: ")
+numerics = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
-num2 = float(input("Enter the second number: "))
+symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
 
+def character_amount(type):
+    while True:
+        try:
+            return int(input(f"How many {type}? "))
+        except ValueError:
+            print("Please pick a number")
 
-calculation_function = operation_dict[operation]
+user_letters = character_amount("letters")
+user_numbers = character_amount("numbers")
+user_symbols = character_amount("symbols")
 
+for x in range(user_letters):
+    userpass_list.append(random.choice(alphabet))
 
-answer = calculation_function(num1, num2)
-print(f"{num1} {operation} {num2} = {answer}")
+for x in range(user_numbers):
+    userpass_list.append(random.choice(numerics))
+
+for x in range(user_symbols):
+    userpass_list.append(random.choice(symbols))
+
+random.shuffle(userpass_list)
+
+for x in userpass_list:
+    userpass = userpass + x
+
+print(userpass)
